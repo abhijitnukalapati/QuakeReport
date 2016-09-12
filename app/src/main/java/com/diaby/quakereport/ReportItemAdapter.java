@@ -26,9 +26,9 @@ public class ReportItemAdapter extends RecyclerView.Adapter<ReportItemHolder> {
 
     @Override
     public void onBindViewHolder(ReportItemHolder holder, int position) {
-        holder.magnitude.setText(items.get(position).mag);
-        holder.location.setText(items.get(position).place);
-        holder.date.setText(items.get(position).time);
+        holder.magnitude.setText(String.valueOf(items.get(position).getMag()));
+        holder.location.setText(items.get(position).getPlace());
+        holder.date.setText(items.get(position).getHumanReadableTime());
     }
 
     @Override

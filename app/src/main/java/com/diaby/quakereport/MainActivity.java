@@ -10,27 +10,25 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView vRecylerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        vRecylerView = (RecyclerView) findViewById(R.id.report_list);
-        vRecylerView.setAdapter(new ReportItemAdapter(buildDummyData()));
-        vRecylerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.report_list);
+        recyclerView.setAdapter(new ReportItemAdapter(buildDummyData()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private List<MEarthQuake> buildDummyData() {
         List<MEarthQuake> earthquakes  = new ArrayList<>();
-        earthquakes.add(new MEarthQuake("San Francisco", "Feb 2, 2016", "7.2"));
-        earthquakes.add(new MEarthQuake("London", "July 20, 2015", "6.1"));
-        earthquakes.add(new MEarthQuake("Tokyo", "Nov 10, 2014", "3.9"));
-        earthquakes.add(new MEarthQuake("Mexico City", "May 3, 2014", "5.4"));
-        earthquakes.add(new MEarthQuake("Moscow", "Jan 31, 2013", "2.8"));
-        earthquakes.add(new MEarthQuake("Rio de Janeiro", "Aug 19, 2012", "4.9"));
-        earthquakes.add(new MEarthQuake("Paris", "Oct 30, 2011", "1.6"));
+        earthquakes.add(new MEarthQuake("San Francisco", 1473502099610L, 7.20));
+        earthquakes.add(new MEarthQuake("London", 1473371180090L, 6.1));
+        earthquakes.add(new MEarthQuake("Tokyo", 1473371180090L,3.9));
+        earthquakes.add(new MEarthQuake("Mexico City", 1473116044850L, 5.4));
+        earthquakes.add(new MEarthQuake("Moscow", 1472747877790L, 2.8));
+        earthquakes.add(new MEarthQuake("Rio de Janeiro", 1472613096060L, 4.9));
+        earthquakes.add(new MEarthQuake("Paris", 1472444997880L, 1.4));
         return earthquakes;
     }
 }
