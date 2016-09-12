@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding ="@dimen/standard_space">
+
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/circle_orange"
+        android:padding="@dimen/standard_space"
+        tools:text="4.5"/>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAllCaps="true"
+        android:layout_toRightOf="@+id/magnitude"
+        android:layout_marginLeft="@dimen/standard_space"
+        tools:text="64km n of"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toRightOf="@+id/magnitude"
+        android:layout_toEndOf="@+id/magnitude"
+        android:layout_below="@+id/distance"
+        android:layout_marginLeft="@dimen/standard_space"
+        tools:text="Taltal, Chile"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAllCaps="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/standard_space"
+        tools:text="Nov 27, 2015"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAllCaps="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/standard_space"
+        android:layout_below="@+id/date"
+        tools:text="3:00 PM"/>
+</RelativeLayout>
