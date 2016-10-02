@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.report_list);
+
+        //noinspection ConstantConditions (suppress null pointer exception)
         recyclerView.setAdapter(new ReportItemAdapter(buildDummyData()));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
